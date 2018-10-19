@@ -248,7 +248,7 @@ def main(
     logger.debug(
         "Looking up all photos%s...",
         "" if skip_videos else " and videos")
-    photos = icloud.photos.all
+    photos = icloud.photos.albums['Favorites']
 
     def photos_exception_handler(ex, retries):
         """Handles session errors in the PhotoAlbum photos iterator"""
